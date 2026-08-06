@@ -4,7 +4,10 @@ resource "azurerm_virtual_network" "vnet" {
  address_space = azurerm_resource_group.rg.location
  location = azurerm_resource_group.rg.name
  resource_group_name = azurerm_resource_group.rg.name
+
    tags = {
     Department = "IT"
-   } 
+    environment = "demo"
+} 
 }
+
